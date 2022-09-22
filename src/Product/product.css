@@ -1,0 +1,23 @@
+.single-product{
+    margin-left:10px ;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+}
+.single-product img{
+    padding: 10px;
+}
+.product-details{
+    padding: 10px;
+}
+.product-details h4{
+    font-weight: 400;
+    color: blue;
+}
+button{
+    height: 30px;
+    width: 180px;
+    background-color: goldenrod;
+    border: 1px solid darkgoldenrod;
+    border-radius: 3px;
+    cursor: pointer;
+}

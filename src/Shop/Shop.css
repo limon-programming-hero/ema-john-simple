@@ -1,0 +1,17 @@
+.Body{
+    display: flex;
+}
+.Product-portion{
+    width: 80%;
+    border-right: 1px solid lightgray;
+    margin:0px 10px 10px 70px;
+    padding: 10px;
+}
+.cart-portion{
+    width: 20%;
+    margin: 10px;
+    padding: 10px;
+}
+.cart-portion h3,.cart-portion p{
+    text-align: center;
+}
