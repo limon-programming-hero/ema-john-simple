@@ -1,10 +1,11 @@
 import React from 'react';
-import Product from '../Product/Product';
-import fakeData from '../fakeData';
+import Product from '../Product/Product.js';
+import Cart from '../Cart/Cart.js';
+import fakeData from '../../fakeData';
 import { useState } from 'react';
 import './Shop.css'
 
-const Body = () => {
+const Shop = () => {
     const products = fakeData.slice(0, 10);
     let [order, setOrder] = useState([]);
     const orderHandler = (OrderProduct) => {
@@ -22,14 +23,9 @@ const Body = () => {
                 }
             </div>
             <div className='cart-portion'>
-                <h3>Order Summary</h3>
-                <p>Items ordered: {order.length}</p>
-                {/* <p><small></small></p>
-                <p><small></small></p>
-                <p><small></small></p>
-                <p><small></small></p> */}
+                <Cart orderProduct= {order}></Cart>
             </div>
         </div>
     );
 };
-export default Body;
+export default Shop;
