@@ -1,7 +1,7 @@
 .single-product{
-    margin-left:10px ;
+    margin-left:100px ;
     display: flex;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid  lightgray;
 }
 .single-product img{
     padding: 10px;
