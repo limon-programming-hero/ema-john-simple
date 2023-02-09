@@ -22,6 +22,7 @@ export const userContext = createContext();
 
 function App() {
   const [userLogin, setUserLogin] = useState({});
+  console.log(userLogin)
   return (
     <userContext.Provider value={[userLogin, setUserLogin]} >
       <h4>Email:{userLogin.email}</h4>

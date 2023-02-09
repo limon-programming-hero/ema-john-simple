@@ -25,6 +25,10 @@ const LogIn = () => {
 
     const HandleBlur = (e) => {
         const userInfo = { ...user };
+        if (e.target.name === 'name') {
+            userInfo[e.target.name] = e.target.value;
+            SetUser(userInfo);
+        }
         if (e.target.name === 'email') {
             const IsEmail = /^\S+@\S+\.\S+$/.test(e.target.value);
             userInfo[e.target.name] = e.target.value
@@ -34,7 +38,7 @@ const LogIn = () => {
             const IsLength = e.target.value.length > 6;
             const IsNumber = /\d/.test(e.target.value);
             const IsPassword = IsNumber && IsLength;
-            userInfo[e.target.name] = e.target.value
+            userInfo[e.target.name] = e.target.value;
             IsPassword && SetUser(userInfo);
         }
         else if (e.target.name === 'confirmPassword') {
@@ -70,6 +74,7 @@ const LogIn = () => {
                     userInfo.submitFeedback = 'Account Signed In Successfully!'
                     SetUser(userInfo);
                     setUserLogin({ name: user.name, email: user.email })
+                    console.log(userLogin);
                     navigate('/shipment');
                 })
                 .catch((error) => {
@@ -85,6 +90,7 @@ const LogIn = () => {
         if (user.password === '') {
             SetNoPass(<p style={{ color: 'red', textAlign: 'center' }}>password must be more than 6 character containing with at lest one number.</p>)
         }
+        console.log(user);
         e.preventDefault();
     }
     return (

@@ -1,21 +1,34 @@
-.Header{
+.Header {
     text-align: center;
 }
-.Header img{
-    width: 25%;;
+
+.Header img {
+    width: 25%;
+    ;
 }
-nav{
+
+nav {
     display: flex;
     padding-left: 30px;
     background-color: black;
 }
-nav a{
+.Header-button{
+    background-color: black;
+    border: none;
+    border-radius: none;
+    height: 100%;
+}
+
+nav a,
+.Header-button {
     padding: 10px;
     font-size: medium;
-    font-weight:400;
+    font-weight: 400;
     text-decoration: none;
-    color:white;
+    color: white;
 }
-nav a:hover{
+
+nav a:hover,
+.Header-button:hover {
     background-color: lightgray;
 }
